@@ -3,30 +3,36 @@ author: warmilk
 github: https://github.com/warmilk
 """
 
-
 import os
 import subprocess
-from bs4 import BeautifulSoup as BS
+import re
+import urllib
+from bs4 import BeautifulSoup as BeautifulSoup
 import requests
 
 
-# 读取ixiaBreakPointRrport.html并处理提取出有用的漏洞信息
-def html_to_pylist(localHtmlUrl):
-    htmlRes = requests.get(localHtmlUrl)
-    # res.apparent_encoding  是从内容中分析出的response的编码方式
-    htmlRes.encoding = htmlRes.apparent_encoding
-    html = htmlRes.text  # res.text 为字符串方式的响应体，会自动根据响应头部的字符编码进行解码
-    all_soup = BS(html, "lxml") # beautifulSoup靓汤，bs是一个用来从HTML或者XML中提取数据的库，源HTML就是一锅乱炖的汤，用了lxml这个解析库之后，就可以通过soup.tagName的方式去获取到HTML的dom节点的数据
+"""
+读取ixiaBreakPointRrport.html并处理提取出有用的漏洞信息
+"""
+def go():
+    response = urllib.request.urlopen('file:///D:/quying-work/pythonProject/assets/1.html', timeout=1)
+    html = response.read()
+    soup = BeautifulSoup(html, "lxml")
+    # 获取html里面所有根据time of strike手动添加了class="strike-table"的table标签,从0开始计数，第12个之后的table才是有用的
+    table_list = soup.find_all('table', {'class': 'strike-table'})
+    # table_list = soup.select("table:nth-child(n+13)")
+    # print(table_list)
+    for table in table_list:
+        tbody_list = table.find_all('tbody')
+        for tbody in tbody_list:
+            tr_list = tbody.find_all('tr')
+            for tr in tr_list:
+                strike_name = tr.select_one("td:nth-of-type(2)").find('a').text
+                #将原始的html里面strike name自带的\n空格\t换行过滤走
+                result = re.sub(r'\s', '', strike_name)
+                print(result)
 
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    go()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
