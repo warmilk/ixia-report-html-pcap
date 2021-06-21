@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"X97EmbedAn Excel Document (http)"; flow:established,to_server; reference:cve,2006-3059; classtype:attempted-user;)

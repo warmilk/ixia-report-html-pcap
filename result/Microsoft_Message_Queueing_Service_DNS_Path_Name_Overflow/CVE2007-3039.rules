@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft Message Queueing Service DNS Path Name Overflow"; flow:established,to_server; reference:cve,2007-3039; classtype:attempted-user;)

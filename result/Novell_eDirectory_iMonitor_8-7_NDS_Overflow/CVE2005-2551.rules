@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Novell eDirectory iMonitor 8.7 NDS Overflow"; flow:established,to_server; reference:cve,2005-2551; classtype:attempted-user;)

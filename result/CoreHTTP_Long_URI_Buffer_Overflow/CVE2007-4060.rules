@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"CoreHTTP Long URI Buffer Overflow"; flow:established,to_server; reference:cve,2007-4060; classtype:attempted-user;)

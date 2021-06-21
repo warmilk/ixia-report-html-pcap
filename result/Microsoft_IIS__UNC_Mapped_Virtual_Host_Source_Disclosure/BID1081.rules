@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft IIS:  UNC Mapped Virtual Host Source Disclosure"; flow:established,to_server; reference:cve,1081; classtype:attempted-user;)

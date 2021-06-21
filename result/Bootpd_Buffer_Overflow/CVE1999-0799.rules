@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"Bootpd Buffer Overflow"; flow:established,to_server; reference:cve,1999-0799; classtype:attempted-user;)

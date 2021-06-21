@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft RRAS Buffer Overflow (Function 12) (generic/2000)"; flow:established,to_server; reference:cve,2006-2370; classtype:attempted-user;)

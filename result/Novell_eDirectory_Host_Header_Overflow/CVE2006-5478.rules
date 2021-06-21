@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Novell eDirectory Host Header Overflow"; flow:established,to_server; reference:cve,2006-5478; classtype:attempted-user;)

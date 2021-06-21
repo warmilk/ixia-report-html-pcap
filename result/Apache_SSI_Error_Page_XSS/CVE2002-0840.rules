@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Apache SSI Error Page XSS"; flow:established,to_server; reference:cve,2002-0840; classtype:attempted-user;)

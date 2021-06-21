@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"CA BrightStor Discovery Service Overflow"; flow:established,to_server; reference:cve,2005-0260; classtype:attempted-user;)

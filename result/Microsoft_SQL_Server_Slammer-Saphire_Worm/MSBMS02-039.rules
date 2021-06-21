@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"Microsoft SQL Server Slammer/Saphire Worm"; flow:established,to_server; reference:cve,MS02-039; classtype:attempted-user;)

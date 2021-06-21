@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Xitami Web Server If-Modified-Since Buffer Overflow"; flow:established,to_server; reference:cve,2007-5067; classtype:attempted-user;)

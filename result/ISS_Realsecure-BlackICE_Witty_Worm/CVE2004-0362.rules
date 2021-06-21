@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"ISS Realsecure/BlackICE Witty Worm"; flow:established,to_server; reference:cve,2004-0362; classtype:attempted-user;)

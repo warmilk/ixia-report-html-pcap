@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"UNIX rlogind Service root Account Access"; flow:established,to_server; reference:cve,X_rlogind_Service_root_Account_Access; classtype:attempted-user;)

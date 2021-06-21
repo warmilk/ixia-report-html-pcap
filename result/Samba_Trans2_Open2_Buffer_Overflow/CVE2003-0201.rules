@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Samba Trans2 Open2 Buffer Overflow"; flow:established,to_server; reference:cve,2003-0201; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Computer Associates BrightStor ARCServe BackUp xdr_handle_t Code Execution"; flow:established,to_server; reference:cve,2007-1785; classtype:attempted-user;)

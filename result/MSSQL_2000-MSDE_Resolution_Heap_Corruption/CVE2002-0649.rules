@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"MSSQL 2000/MSDE Resolution Heap Corruption"; flow:established,to_server; reference:cve,2002-0649; classtype:attempted-user;)

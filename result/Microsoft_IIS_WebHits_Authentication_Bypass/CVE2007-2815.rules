@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft IIS: WebHits Authentication Bypass"; flow:established,to_server; reference:cve,2007-2815; classtype:attempted-user;)

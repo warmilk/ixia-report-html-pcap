@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Samba LsarAddPrivilegesToAccount lsa_io_privilege_set() Heap Overflow"; flow:established,to_server; reference:cve,2007-2446; classtype:attempted-user;)

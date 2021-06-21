@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft Server Service NetpwPathCanonicalize Overflow (Windows 2003)"; flow:established,to_server; reference:cve,2006-3439; classtype:attempted-user;)

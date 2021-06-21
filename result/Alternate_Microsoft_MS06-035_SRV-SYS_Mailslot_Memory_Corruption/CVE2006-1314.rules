@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Alternate Microsoft MS06-035 SRV.SYS Mailslot Memory Corruption"; flow:established,to_server; reference:cve,2006-1314; classtype:attempted-user;)

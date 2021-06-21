@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"ISC BIND Inverse Query Information Leak"; flow:established,to_server; reference:cve,2001-0012; classtype:attempted-user;)

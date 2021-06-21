@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft IIS ASP Chunked Encoding Heap Overflow"; flow:established,to_server; reference:cve,2002-0079; classtype:attempted-user;)

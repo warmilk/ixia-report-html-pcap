@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Macromedia Coldfusion Remote SYSTEM Buffer Overflow (HTTP Header)"; flow:established,to_server; reference:cve,2002-1992; classtype:attempted-user;)

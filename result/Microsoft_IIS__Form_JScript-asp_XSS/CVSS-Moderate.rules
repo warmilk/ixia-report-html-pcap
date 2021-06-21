@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft IIS:  Form_JScript.asp XSS"; flow:established,to_server; reference:cve,S-Moderate; classtype:attempted-user;)

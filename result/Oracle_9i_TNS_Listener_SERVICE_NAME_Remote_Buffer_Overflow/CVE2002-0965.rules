@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Oracle 9i TNS Listener SERVICE_NAME Remote Buffer Overflow"; flow:established,to_server; reference:cve,2002-0965; classtype:attempted-user;)

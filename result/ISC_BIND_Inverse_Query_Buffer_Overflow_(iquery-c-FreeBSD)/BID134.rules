@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"ISC BIND Inverse Query Buffer Overflow (iquery.c/FreeBSD)"; flow:established,to_server; reference:cve,134; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"IPSwitch WhatsUp Gold _maincfgret.cgi instancename Parameter Buffer Overflow"; flow:established,to_server; reference:cve,2004-0798; classtype:attempted-user;)

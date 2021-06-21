@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Computer Associates BrightStor ARCserve Backup CheyenneDS Mailslot Overflow"; flow:established,to_server; reference:cve,2006-5142; classtype:attempted-user;)

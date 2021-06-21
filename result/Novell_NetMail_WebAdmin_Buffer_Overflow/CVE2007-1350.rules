@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Novell NetMail WebAdmin Buffer Overflow"; flow:established,to_server; reference:cve,2007-1350; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Apache Win32 DOS Batch File Arbitrary Command Execution"; flow:established,to_server; reference:cve,2002-0061; classtype:attempted-user;)

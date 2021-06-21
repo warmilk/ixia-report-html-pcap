@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"MailEnable APPEND Command Overflow"; flow:established,to_server; reference:cve,2007-1301; classtype:attempted-user;)

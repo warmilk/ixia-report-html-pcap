@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Computer Associates BrightStor ARCServe BackUp Tape Engine RPC Code Execution"; flow:established,to_server; reference:cve,2007-0168; classtype:attempted-user;)

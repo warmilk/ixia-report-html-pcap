@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Apache auth_ldap Username Format String"; flow:established,to_server; reference:cve,2006-0150; classtype:attempted-user;)

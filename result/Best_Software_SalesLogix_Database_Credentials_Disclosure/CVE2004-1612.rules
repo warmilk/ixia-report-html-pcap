@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Best Software SalesLogix Database Credentials Disclosure"; flow:established,to_server; reference:cve,2004-1612; classtype:attempted-user;)

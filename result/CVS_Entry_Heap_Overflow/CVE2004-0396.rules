@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"CVS 'Entry' Heap Overflow"; flow:established,to_server; reference:cve,2004-0396; classtype:attempted-user;)

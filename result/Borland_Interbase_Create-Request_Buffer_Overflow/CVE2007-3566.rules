@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Borland Interbase Create-Request Buffer Overflow"; flow:established,to_server; reference:cve,2007-3566; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Apache Win32 Directory Traversal"; flow:established,to_server; reference:cve,2002-0661; classtype:attempted-user;)

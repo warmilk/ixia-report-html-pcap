@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft IIS NTDLL.DLL WebDAV Buffer Overflow (SEARCH)"; flow:established,to_server; reference:cve,2003-0109; classtype:attempted-user;)

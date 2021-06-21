@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Seattle Lab Mail 5.5 POP3 Overflow"; flow:established,to_server; reference:cve,2003-0264; classtype:attempted-user;)

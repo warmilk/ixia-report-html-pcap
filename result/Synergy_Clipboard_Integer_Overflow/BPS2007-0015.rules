@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Synergy Clipboard Integer Overflow"; flow:established,to_server; reference:cve,2007-0015; classtype:attempted-user;)

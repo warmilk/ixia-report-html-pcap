@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"UNIX rlogind Service guest Access"; flow:established,to_server; reference:cve,X_rlogind_Service_guest_Access; classtype:attempted-user;)

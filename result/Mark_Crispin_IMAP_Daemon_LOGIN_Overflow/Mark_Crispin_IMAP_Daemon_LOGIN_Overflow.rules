@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Mark Crispin IMAP Daemon LOGIN Overflow"; flow:established,to_server; reference:cve,k_Crispin_IMAP_Daemon_LOGIN_Overflow; classtype:attempted-user;)

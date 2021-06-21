@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft Plug and Play Service Overflow (metasploit/2000)"; flow:established,to_server; reference:cve,2005-1983; classtype:attempted-user;)

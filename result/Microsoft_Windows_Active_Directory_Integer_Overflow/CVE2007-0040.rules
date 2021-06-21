@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft Windows Active Directory Integer Overflow"; flow:established,to_server; reference:cve,2007-0040; classtype:attempted-user;)

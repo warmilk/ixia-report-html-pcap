@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Apache Chunked Encoding Overflow - Apache Nosejob"; flow:established,to_server; reference:cve,2002-0392; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject raw any any -> any any (msg:"Microsoft Windows IGMPv3 Query Source List Overflow"; flow:established,to_server; reference:cve,2007-0069; classtype:attempted-user;)

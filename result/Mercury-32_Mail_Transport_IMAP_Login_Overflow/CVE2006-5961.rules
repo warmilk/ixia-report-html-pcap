@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Mercury/32 Mail Transport IMAP Login Overflow"; flow:established,to_server; reference:cve,2006-5961; classtype:attempted-user;)

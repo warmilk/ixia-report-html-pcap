@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft IIS .htr ISAPI Chunked Encoding Overflow"; flow:established,to_server; reference:cve,2002-0364; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft Plug and Play Service Overflow (registry)"; flow:established,to_server; reference:cve,2005-2120; classtype:attempted-user;)

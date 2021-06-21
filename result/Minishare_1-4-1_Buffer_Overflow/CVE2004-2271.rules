@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Minishare 1.4.1 Buffer Overflow"; flow:established,to_server; reference:cve,2004-2271; classtype:attempted-user;)

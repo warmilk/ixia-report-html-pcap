@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"IBM Tivoli Directory Server LDAP Memory Corruption"; flow:established,to_server; reference:cve,2006-0717; classtype:attempted-user;)

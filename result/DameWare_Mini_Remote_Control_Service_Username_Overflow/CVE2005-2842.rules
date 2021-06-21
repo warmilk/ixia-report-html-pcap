@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"DameWare Mini Remote Control Service Username Overflow"; flow:established,to_server; reference:cve,2005-2842; classtype:attempted-user;)

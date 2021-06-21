@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Hexamail Server POP3 USER Command Overflow"; flow:established,to_server; reference:cve,25496; classtype:attempted-user;)

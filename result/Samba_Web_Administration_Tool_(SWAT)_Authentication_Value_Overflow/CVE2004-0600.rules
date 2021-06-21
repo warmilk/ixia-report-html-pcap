@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Samba Web Administration Tool (SWAT) Authentication Value Overflow"; flow:established,to_server; reference:cve,2004-0600; classtype:attempted-user;)

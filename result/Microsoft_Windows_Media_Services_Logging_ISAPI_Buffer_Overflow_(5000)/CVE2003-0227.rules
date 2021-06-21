@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft Windows Media Services Logging ISAPI Buffer Overflow (5000)"; flow:established,to_server; reference:cve,2003-0227; classtype:attempted-user;)

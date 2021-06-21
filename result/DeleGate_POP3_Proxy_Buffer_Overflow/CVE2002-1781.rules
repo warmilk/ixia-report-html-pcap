@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"DeleGate POP3 Proxy Buffer Overflow"; flow:established,to_server; reference:cve,2002-1781; classtype:attempted-user;)

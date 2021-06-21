@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Icecast (<= 2.0.1) Header Overwrite (win32)"; flow:established,to_server; reference:cve,2004-1561; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft IIS:  HTR Source Fragment Disclosure"; flow:established,to_server; reference:cve,2001-0004; classtype:attempted-user;)

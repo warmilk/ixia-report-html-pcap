@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft IIS .htr ISAPI Buffer Overflow"; flow:established,to_server; reference:cve,2002-0071; classtype:attempted-user;)

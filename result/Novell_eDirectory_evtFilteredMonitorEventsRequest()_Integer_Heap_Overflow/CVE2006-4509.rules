@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Novell eDirectory evtFilteredMonitorEventsRequest() Integer Heap Overflow"; flow:established,to_server; reference:cve,2006-4509; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"UNIX rlogind Service -froot Authentication Bypass"; flow:established,to_server; reference:cve,1999-0113; classtype:attempted-user;)

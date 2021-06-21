@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Trend Micro ServerProtect CMON_NetTestConnection Overflow"; flow:established,to_server; reference:cve,2007-1070; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft RPC DCOM ISystemActivator Buffer Overflow (stacked)"; flow:established,to_server; reference:cve,2003-0352; classtype:attempted-user;)

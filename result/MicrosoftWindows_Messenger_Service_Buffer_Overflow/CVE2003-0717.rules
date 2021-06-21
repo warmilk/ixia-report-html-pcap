@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"MicrosoftWindows Messenger Service Buffer Overflow"; flow:established,to_server; reference:cve,2003-0717; classtype:attempted-user;)

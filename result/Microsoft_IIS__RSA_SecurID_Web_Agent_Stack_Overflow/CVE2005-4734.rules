@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft IIS:  RSA SecurID Web Agent Stack Overflow"; flow:established,to_server; reference:cve,2005-4734; classtype:attempted-user;)

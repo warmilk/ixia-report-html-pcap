@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft DTC Memory Modification Code Execution"; flow:established,to_server; reference:cve,2005-2119; classtype:attempted-user;)

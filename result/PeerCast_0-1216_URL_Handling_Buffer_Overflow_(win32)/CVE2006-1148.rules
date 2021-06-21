@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"PeerCast 0.1216 URL Handling Buffer Overflow (win32)"; flow:established,to_server; reference:cve,2006-1148; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"Grandstream GXV-3000 SIP Phone Remote Eavesdropping"; flow:established,to_server; reference:cve,2007-4498; classtype:attempted-user;)

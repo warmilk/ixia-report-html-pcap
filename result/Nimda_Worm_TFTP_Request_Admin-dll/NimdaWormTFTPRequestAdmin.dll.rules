@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"Nimda Worm TFTP Request Admin.dll"; flow:established,to_server; reference:cve,daWormTFTPRequestAdmin.dll; classtype:attempted-user;)

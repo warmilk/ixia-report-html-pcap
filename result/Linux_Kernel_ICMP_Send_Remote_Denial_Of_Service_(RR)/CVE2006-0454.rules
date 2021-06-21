@@ -1,0 +1,1 @@
+reject raw any any -> any any (msg:"Linux Kernel ICMP_Send Remote Denial Of Service (RR)"; flow:established,to_server; reference:cve,2006-0454; classtype:attempted-user;)

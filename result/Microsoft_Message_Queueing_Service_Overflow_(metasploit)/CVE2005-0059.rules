@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft Message Queueing Service Overflow (metasploit)"; flow:established,to_server; reference:cve,2005-0059; classtype:attempted-user;)

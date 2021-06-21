@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"IBM Informix Dynamic Server Long Username Authentication Stack Overflow"; flow:established,to_server; reference:cve,2006-3853; classtype:attempted-user;)

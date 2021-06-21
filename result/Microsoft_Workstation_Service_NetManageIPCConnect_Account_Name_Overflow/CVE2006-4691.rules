@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft Workstation Service NetManageIPCConnect Account Name Overflow"; flow:established,to_server; reference:cve,2006-4691; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"Solaris SAdmind Remote Administrative Access"; flow:established,to_server; reference:cve,2003-0722; classtype:attempted-user;)

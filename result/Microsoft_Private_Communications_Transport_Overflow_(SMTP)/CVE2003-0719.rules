@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft Private Communications Transport Overflow (SMTP)"; flow:established,to_server; reference:cve,2003-0719; classtype:attempted-user;)

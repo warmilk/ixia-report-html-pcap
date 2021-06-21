@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Computer Associates BrightStor ARCServe BackUp LGServer Stack Overflow (1900)"; flow:established,to_server; reference:cve,2007-0449; classtype:attempted-user;)

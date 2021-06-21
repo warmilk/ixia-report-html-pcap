@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"ISC BIND TSIG Buffer Overflow (LSD-PL)"; flow:established,to_server; reference:cve,2001-0010; classtype:attempted-user;)

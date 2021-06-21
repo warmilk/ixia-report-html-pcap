@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Samba LsarLookupSids lsa_io_trans_names() Heap Overflow"; flow:established,to_server; reference:cve,2007-2446; classtype:attempted-user;)

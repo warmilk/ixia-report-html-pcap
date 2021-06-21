@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Windows RSH Daemon Buffer Overflow"; flow:established,to_server; reference:cve,2007-4006; classtype:attempted-user;)

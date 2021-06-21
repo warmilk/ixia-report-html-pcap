@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"McAfee EPolicy Orchestrator Source Header Overflow"; flow:established,to_server; reference:cve,2006-5156; classtype:attempted-user;)

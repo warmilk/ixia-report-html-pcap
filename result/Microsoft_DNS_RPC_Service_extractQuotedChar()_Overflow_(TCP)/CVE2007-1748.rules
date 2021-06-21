@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft DNS RPC Service extractQuotedChar() Overflow (TCP)"; flow:established,to_server; reference:cve,2007-1748; classtype:attempted-user;)

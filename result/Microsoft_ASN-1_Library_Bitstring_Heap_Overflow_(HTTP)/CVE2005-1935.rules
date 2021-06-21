@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft ASN.1 Library Bitstring Heap Overflow (HTTP)"; flow:established,to_server; reference:cve,2005-1935; classtype:attempted-user;)

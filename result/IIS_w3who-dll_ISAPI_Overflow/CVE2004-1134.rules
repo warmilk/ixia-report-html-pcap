@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"IIS w3who.dll ISAPI Overflow"; flow:established,to_server; reference:cve,2004-1134; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"RealNetworks HELIX Server Describe Header Buffer Overflow"; flow:established,to_server; reference:cve,2002-1643; classtype:attempted-user;)

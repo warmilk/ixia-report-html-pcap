@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Alt-N WebAdmin USER Buffer Overflow"; flow:established,to_server; reference:cve,2003-0471; classtype:attempted-user;)

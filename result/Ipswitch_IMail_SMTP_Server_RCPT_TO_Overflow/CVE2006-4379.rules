@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Ipswitch IMail SMTP Server 'RCPT TO' Overflow"; flow:established,to_server; reference:cve,2006-4379; classtype:attempted-user;)

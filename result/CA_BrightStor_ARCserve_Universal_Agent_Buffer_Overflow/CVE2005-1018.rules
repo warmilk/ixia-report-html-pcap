@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"CA BrightStor ARCserve Universal Agent Buffer Overflow"; flow:established,to_server; reference:cve,2005-1018; classtype:attempted-user;)

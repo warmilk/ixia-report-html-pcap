@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"SAP Message Server Server Group Parameter Overflow"; flow:established,to_server; reference:cve,24765; classtype:attempted-user;)

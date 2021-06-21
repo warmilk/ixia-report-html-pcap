@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"MSSQL 2000/MSDE Hello Overflow"; flow:established,to_server; reference:cve,2002-1123; classtype:attempted-user;)

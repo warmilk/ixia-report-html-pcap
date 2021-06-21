@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"SunRPC rpc.ypupdated Remote Command Execution"; flow:established,to_server; reference:cve,1999-0209; classtype:attempted-user;)

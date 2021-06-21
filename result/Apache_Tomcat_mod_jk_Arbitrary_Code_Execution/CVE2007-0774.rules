@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Apache Tomcat mod_jk Arbitrary Code Execution"; flow:established,to_server; reference:cve,2007-0774; classtype:attempted-user;)

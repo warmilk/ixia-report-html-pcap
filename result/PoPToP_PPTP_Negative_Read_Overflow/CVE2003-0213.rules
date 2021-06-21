@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"PoPToP PPTP Negative Read Overflow"; flow:established,to_server; reference:cve,2003-0213; classtype:attempted-user;)

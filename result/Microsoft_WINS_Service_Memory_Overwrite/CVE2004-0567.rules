@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft WINS Service Memory Overwrite"; flow:established,to_server; reference:cve,2004-0567; classtype:attempted-user;)

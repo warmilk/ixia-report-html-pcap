@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft LSASS DsRoleUpgradeDownlevelServer Overflow (metasploit/2000)"; flow:established,to_server; reference:cve,2003-0533; classtype:attempted-user;)

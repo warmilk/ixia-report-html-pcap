@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"iPlanet Web Admin Server"; flow:established,to_server; reference:cve,2002-1315; classtype:attempted-user;)

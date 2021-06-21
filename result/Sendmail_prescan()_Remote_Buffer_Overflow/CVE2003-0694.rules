@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Sendmail prescan() Remote Buffer Overflow"; flow:established,to_server; reference:cve,2003-0694; classtype:attempted-user;)

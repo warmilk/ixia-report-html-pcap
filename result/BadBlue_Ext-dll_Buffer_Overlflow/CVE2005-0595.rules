@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"BadBlue Ext.dll Buffer Overlflow"; flow:established,to_server; reference:cve,2005-0595; classtype:attempted-user;)

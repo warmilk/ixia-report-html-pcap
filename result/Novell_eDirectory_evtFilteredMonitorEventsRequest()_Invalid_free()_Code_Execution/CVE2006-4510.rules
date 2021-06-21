@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Novell eDirectory evtFilteredMonitorEventsRequest() Invalid free() Code Execution"; flow:established,to_server; reference:cve,2006-4510; classtype:attempted-user;)

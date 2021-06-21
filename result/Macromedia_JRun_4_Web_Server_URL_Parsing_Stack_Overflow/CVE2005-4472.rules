@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Macromedia JRun 4 Web Server URL Parsing Stack Overflow"; flow:established,to_server; reference:cve,2005-4472; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft IIS:  ServerVariables_JScript.asp Information Disclosure"; flow:established,to_server; reference:cve,S-Moderate; classtype:attempted-user;)

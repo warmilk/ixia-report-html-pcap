@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Squid NTLM Authentication Password Overflow"; flow:established,to_server; reference:cve,2004-0541; classtype:attempted-user;)

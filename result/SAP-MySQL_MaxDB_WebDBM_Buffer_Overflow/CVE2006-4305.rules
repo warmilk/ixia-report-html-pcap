@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"SAP/MySQL MaxDB WebDBM Buffer Overflow"; flow:established,to_server; reference:cve,2006-4305; classtype:attempted-user;)

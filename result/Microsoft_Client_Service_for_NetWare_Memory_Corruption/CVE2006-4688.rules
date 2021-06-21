@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft Client Service for NetWare Memory Corruption"; flow:established,to_server; reference:cve,2006-4688; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"SipXtapi CSEQ Buffer Overflow (seh)"; flow:established,to_server; reference:cve,2006-3524; classtype:attempted-user;)

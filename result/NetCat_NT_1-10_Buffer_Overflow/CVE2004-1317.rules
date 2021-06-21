@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"NetCat NT 1.10 Buffer Overflow"; flow:established,to_server; reference:cve,2004-1317; classtype:attempted-user;)

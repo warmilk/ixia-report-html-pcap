@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"IIS FrontPage fp30reg.dll Chunked Overflow"; flow:established,to_server; reference:cve,2003-0822; classtype:attempted-user;)

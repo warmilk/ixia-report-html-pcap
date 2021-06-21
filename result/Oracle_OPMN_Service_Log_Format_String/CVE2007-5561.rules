@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Oracle OPMN Service Log Format String"; flow:established,to_server; reference:cve,2007-5561; classtype:attempted-user;)

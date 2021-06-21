@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"CA BrightStor Tape Engine Buffer Overflow"; flow:established,to_server; reference:cve,2006-6076; classtype:attempted-user;)

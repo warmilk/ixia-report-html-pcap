@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft IIS NNTP Service XPAT Overflow"; flow:established,to_server; reference:cve,2004-0574; classtype:attempted-user;)

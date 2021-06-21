@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"SentinelLM UDP Buffer Overflow"; flow:established,to_server; reference:cve,2005-0353; classtype:attempted-user;)

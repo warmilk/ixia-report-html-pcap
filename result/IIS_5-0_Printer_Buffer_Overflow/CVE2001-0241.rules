@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"IIS 5.0 Printer Buffer Overflow"; flow:established,to_server; reference:cve,2001-0241; classtype:attempted-user;)

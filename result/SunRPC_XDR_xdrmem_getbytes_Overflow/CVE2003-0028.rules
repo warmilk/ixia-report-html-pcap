@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"SunRPC XDR xdrmem_getbytes Overflow"; flow:established,to_server; reference:cve,2003-0028; classtype:attempted-user;)

@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Novell Messenger Server 2.0 Accept-Language Overflow"; flow:established,to_server; reference:cve,2006-0992; classtype:attempted-user;)

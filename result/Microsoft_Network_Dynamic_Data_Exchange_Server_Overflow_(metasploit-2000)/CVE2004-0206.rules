@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"Microsoft Network Dynamic Data Exchange Server Overflow (metasploit/2000)"; flow:established,to_server; reference:cve,2004-0206; classtype:attempted-user;)
