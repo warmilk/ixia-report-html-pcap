@@ -14,8 +14,13 @@ import requests
 """
 读取ixiaBreakPointRrport.html并处理提取出有用的漏洞信息
 """
+current_project_path = os.getcwd().replace('\\', '/')
+seq = ('name', 'CVE', 'tuples_protocol', 'tuples_src_ip')
+strike = {}
+strike = strike.fromkeys(seq)
 def go():
-    response = urllib.request.urlopen('file:///D:/quying-work/pythonProject/assets/7.html', timeout=1000)
+    html_path = ''.join(['file:///', current_project_path, '/assets/7.html'])
+    response = urllib.request.urlopen(html_path, timeout=1000)
     html = response.read()
     soup = BeautifulSoup(html, "lxml")
     # 获取html里面所有根据time of strike手动添加了class="strike-table"的table标签,从0开始计数，第12个之后的table才是有用的
@@ -27,24 +32,23 @@ def go():
         for tbody in tbody_list:
             tr_list = tbody.find_all('tr')
             for tr in tr_list:
-                strike_name = tr.select_one("td:nth-of-type(2)").find('a').text
+                # str.strip()  ： 去除字符串头尾的空格
+                strike['name'] = tr.select_one("td:nth-of-type(2)").find('a').text.strip()
+                # 将空格替换为_，Icecast_(<=_2.0.1)_Header_Overwrite_(win32) 的特殊符号处理 Microsoft_IIS:__Form_JScript.asp_XSS
+                strike['name'] = re.sub(r'\s', '_', strike['name']).replace('<=_', 'less_or_equal').replace('.', '-').replace(':', '').replace('\'', '').replace('/', '-')
+                print(strike['name'])
                 # 将原始的html里面strike name自带的\n空格\t换行过滤走
-                strike_name = re.sub(r'\s', '', strike_name)
-                # print(type(tr.select_one("td:nth-of-type(4)>div")))
-                # 判断td:nth-of-type(4)>div是否存在子节点
-                # td_div = tr.select_one("td:nth-of-type(4)>div")
-                # if type(td_div) == "<class 'NoneType'>":
-                #     strike_CVE = 'none'
-                #     print(strike_CVE)
-                # else:
-                #     strike_CVE = td_div.select_one("a").contents
-                #     print(strike_CVE)
-                print(tr.select_one("td:nth-of-type(4)>div>a").contents)
+                strike['CVE'] = tr.select_one("td:nth-of-type(4)>div>a").contents[0]
+                strike['CVE'] = re.sub(r'\s', '', strike['CVE'])
+                strike_tuples = tr.select_one("td:nth-of-type(6)>span").contents[0]
+                strike['tuples_protocol'] = strike_tuples[0:3]
+                # 寻找第一个冒号出现的索引
+                first_colon_index = strike_tuples.find(':')
+                strike['tuples_src_ip'] = strike_tuples[4:first_colon_index]
 
-
-
-
-
+                strike_save_path = ''.join([current_project_path, '/result/', strike['name']])
+                if not os.path.exists(strike_save_path):
+                    os.makedirs(strike_save_path)
 
 if __name__ == '__main__':
     go()
