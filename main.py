@@ -15,7 +15,7 @@ import requests
 读取ixiaBreakPointRrport.html并处理提取出有用的漏洞信息
 """
 def go():
-    response = urllib.request.urlopen('file:///D:/quying-work/pythonProject/assets/6.html', timeout=1)
+    response = urllib.request.urlopen('file:///D:/quying-work/pythonProject/assets/7.html', timeout=1000)
     html = response.read()
     soup = BeautifulSoup(html, "lxml")
     # 获取html里面所有根据time of strike手动添加了class="strike-table"的table标签,从0开始计数，第12个之后的table才是有用的
