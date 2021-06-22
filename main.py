@@ -15,15 +15,23 @@ import requests
 读取ixiaBreakPointRrport.html并处理提取出有用的漏洞信息
 """
 
-current_project_path = os.getcwd().replace('\\', '/')
-html_path = ''.join(['file:///', current_project_path, '/assets/7.html'])
-Tshark_path = "C:/Program Files/Wireshark/tshark.exe"
-pcap_path = ''.join([current_project_path, '/assets/7.pcap'])
+
 seq = ('name', 'CVE', 'tuples_protocol', 'tuples_src_ip')
 strike = {}
 strike = strike.fromkeys(seq)
+
+Tshark_path = '"C:\\Program Files\\Wireshark\\tshark.exe"'
+
+current_project_path = os.getcwd().replace('\\', '/')
+
+current_extract_index = '1'
+source_html_path = ''.join(['file:///', current_project_path, '/assets/' + current_extract_index + '.html'])
+source_pcap_path = '.\\assets\\' + current_extract_index + '.pcap'
+
+
+
 def go():
-    response = urllib.request.urlopen(html_path, timeout=1000)
+    response = urllib.request.urlopen(source_html_path, timeout=1000)
     html = response.read()
     soup = BeautifulSoup(html, "lxml")
     # 获取html里面所有根据time of strike手动添加了class="strike-table"的table标签,从0开始计数，第12个之后的table才是有用的
@@ -50,20 +58,27 @@ def go():
                 # 寻找第一个冒号出现的索引
                 first_colon_index = strike_tuples.find(':')
                 strike['tuples_src_ip'] = strike_tuples[4:first_colon_index]
-
                 strike_save_path = ''.join([current_project_path, '/result/', strike['name']])
                 if not os.path.exists(strike_save_path):
                     os.makedirs(strike_save_path)
-                # 生成pacp和rules文件
-                file = open(strike_save_path + "/" + strike['CVE'] + ".rules", "w")
-                file.write(''.join(['reject ', strike['tuples_protocol'].lower(), ' any any -> any any (msg:"', strike_name, '"; flow:established,to_server;', ' reference:cve,', strike['CVE'][3:], ';', ' classtype:attempted-user;', ')']))
+                # 生成rules文件
+                rules_save_path = strike_save_path + "/" + strike['CVE'] + ".rules"
+                if not os.path.exists(rules_save_path):
+                    file = open(rules_save_path, "w")
+                    file.write(''.join(
+                        ['reject ', strike['tuples_protocol'].lower(), ' any any -> any any (msg:"', strike_name,
+                         '"; flow:established,to_server;', ' reference:cve,', strike['CVE'][3:], ';',
+                         ' classtype:attempted-user;', ')']))
+                    file.close()
+                # 生成pacp文件
+                pcap_output_path = strike_save_path + "/" + strike['CVE'] + '_' + current_extract_index + ".pcap"
+                file = open(pcap_output_path, "w")
                 file.close()
-                file = open(strike_save_path + "/" + strike['CVE'] + ".pcap", "w")
-                file.close()
-                output_path = strike['CVE'] + '.pcap'
-                input_path = pcap_path
-                command = ''.join([Tshark_path, ' -r ', input_path, ' -Y ', 'ip.addr==', strike['tuples_src_ip'], ' -w ', output_path])
-                print(command)
+                # TODO：生成github链接
+                # 用Tshark提取流量包
+                result_pcap_path = '.\\result\\' + strike['name'] + '\\' + strike['CVE'] + '_' + current_extract_index + ".pcap"
+                command = ''.join([Tshark_path, ' -2', ' -r ', source_pcap_path, ' -Y ', 'ip.addr==', strike['tuples_src_ip'], ' -w ', result_pcap_path])
+                print('当前执行的命令是：', command)
                 os.system(command)
 
 

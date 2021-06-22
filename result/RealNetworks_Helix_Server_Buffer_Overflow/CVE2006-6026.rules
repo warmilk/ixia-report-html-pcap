@@ -1,1 +1,1 @@
-reject tcp any any -> any any (msg:"RealNetworks Helix Server Buffer Overflow"; flow:established,to_server; reference:cve,2006-6026; classtype:attempted-user;)
+reject ip  any any -> any any (msg:"RealNetworks Helix Server Buffer Overflow"; flow:established,to_server; reference:cve,2006-6026; classtype:attempted-user;)
